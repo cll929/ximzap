@@ -1,3 +1,4 @@
+import os
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -6,8 +7,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # ================= 配置区 =================
-USERNAME = "xichenmo@outlook.com"
-PASSWORD = "Xich88@@99"
+USERNAME = os.getenv("ZAMPTO_EMAIL")
+PASSWORD = os.getenv("ZAMPTO_PASSWORD")
+
+if not USERNAME or not PASSWORD:
+    raise RuntimeError("❌ 未检测到 ZAMPTO_USER / ZAMPTO_PASS 环境变量")
 SERVER_ID = "2186"
 
 LOGIN_URL = "https://auth.zampto.net/sign-in?app_id=bmhk6c8qdqxphlyscztgl"
