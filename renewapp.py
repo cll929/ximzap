@@ -6,8 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # ================= 配置区 =================
-USERNAME = "ZAMPTO_EMAIL: ${{ secrets.ZAMPTO_EMAIL }}"
-PASSWORD = "ZAMPTO_PASSWORD: ${{ secrets.ZAMPTO_PASSWORD }}"
+USERNAME = "xichenmo@outlook.com"
+PASSWORD = "Xich88@@99"
 SERVER_ID = "2186"
 
 LOGIN_URL = "https://auth.zampto.net/sign-in?app_id=bmhk6c8qdqxphlyscztgl"
